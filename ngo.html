@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FoodLink - NGO Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      
+    </style>
+  </head>
+  <body>
+    <div class="dashboard-shell">
+      <div class="topbar-ngo">
+        <div>
+          <h2>NGO Dashboard</h2>
+          <div class="muted">Welcome, <span id="ngoName">NGO</span></div>
+        </div>
+        <button class="logout-btn" id="logoutBtn">Logout</button>
+      </div>
+
+      <div class="panel">
+        <div class="search-row">
+          <input id="ngoSearch" type="text" placeholder="Search food" />
+          <select id="ngoCategory">
+            <option value="">All categories</option>
+            <option value="Lunch">Lunch</option>
+            <option value="Dinner">Dinner</option>
+            <option value="Breakfast">Breakfast</option>
+            <option value="Snacks">Snacks</option>
+            <option value="Bakery">Bakery</option>
+          </select>
+        </div>
+        <div id="ngoFoodList" class="food-grid"></div>
+      </div>
+    </div>
+  </body>
+</html>

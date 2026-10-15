@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FoodLink - Business Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="dashboard-shell">
+      <div class="top-row">
+        <div class="welcome-card">
+          <h2>Business Dashboard</h2>
+          <p class="muted">Welcome back, <span id="businessName">Business</span></p>
+        </div>
+        <button class="logout-btn" id="logoutBtn">Logout</button>
+      </div>
+
+      <div class="summary-grid">
+        <div class="summary-box">
+          <h4>Total Food Saved</h4>
+          <h2 id="savedCount">0</h2>
+        </div>
+        <div class="summary-box">
+          <h4>My Listings</h4>
+          <h2 id="listingCount">0</h2>
+        </div>
+        <div class="summary-box">
+          <h4>Pending Claims</h4>
+          <h2 id="claimCount">0</h2>
+        </div>
+      </div>
+
+      <div class="content-grid">
+        <div class="panel">
+          <h3>Post Food</h3>
+          <form id="businessFoodForm" class="business-form">
+            <input name="title" placeholder="Food title" required />
+            <textarea name="description" placeholder="Description" required></textarea>
+            <div class="two-col">
+              <input name="category" placeholder="Category" value="Lunch" required />
+              <input name="quantity" type="number" min="1" placeholder="Quantity" required />
+            </div>
+            <div class="two-col">
+              <input name="units" placeholder="Units" value="packs" />
+              <input name="expiryDate" type="date" />
+            </div>
+            <input name="location" placeholder="Location" />
+            <button type="submit" class="primary">Post food</button>
+          </form>
+          <div id="businessMessage" class="muted"></div>
+        </div>
+
+        <div class="panel">
+          <h3>My Listings</h3>
+          <div id="businessListings" class="food-list-small"></div>
+        </div>
+      </div>
+
+      <div class="panel" style="margin-top: 24px;">
+        <h3>Claims for My Food</h3>
+        <div id="businessClaims" class="food-list-small"></div>
+      </div>
+    </div>
+  </body>
+</html>

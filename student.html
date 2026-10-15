@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FoodLink - Student Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="dashboard-shell">
+      <div class="topbar-student">
+        <div>
+          <h2>Student Dashboard</h2>
+          <div class="muted">Welcome, <span id="studentName">Student</span></div>
+        </div>
+        <button class="logout-btn" id="logoutBtn">Logout</button>
+      </div>
+
+      <div class="panel">
+        <div class="search-row">
+          <input id="studentSearch" type="text" placeholder="Search food" />
+          <select id="studentCategory">
+            <option value="">All categories</option>
+            <option value="Lunch">Lunch</option>
+            <option value="Dinner">Dinner</option>
+            <option value="Breakfast">Breakfast</option>
+            <option value="Snacks">Snacks</option>
+            <option value="Bakery">Bakery</option>
+          </select>
+        </div>
+        <div id="studentFoodList" class="food-grid"></div>
+      </div>
+
+      <div class="panel" style="margin-top: 24px;">
+        <h3>My Claims</h3>
+        <div id="studentClaimsList" class="food-grid"></div>
+      </div>
+    </div>
+  </body>
+</html>
